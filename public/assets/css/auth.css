@@ -1,0 +1,110 @@
+/* Auth Pages Styles */
+.bg-gradient-primary {
+    background: linear-gradient(145deg, #4e73df 0%, #224abe 100%);
+    min-height: 100vh;
+}
+
+.bg-login-image {
+    background: url('../img/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-register-image {
+    background: url('../img/register-bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.form-control {
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.form-label {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: #858796;
+}
+
+.form-check-input {
+    margin-left: 0;
+}
+
+.form-check-label {
+    color: #858796;
+    font-size: 0.9rem;
+}
+
+.btn {
+    border-radius: 10rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border-color: #e3e6f0;
+}
+
+.small {
+    font-size: 0.8rem;
+    color: #858796;
+}
+
+.small:hover {
+    color: #4e73df;
+    text-decoration: none;
+}
+
+/* Animation */
+.card {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .bg-login-image,
+    .bg-register-image {
+        min-height: 300px;
+    }
+    
+    .card {
+        margin-top: 1rem;
+    }
+} 

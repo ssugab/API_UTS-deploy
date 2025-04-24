@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address API Provider - Indonesian Address Data API</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                Address API Provider
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documentation">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="auth/login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="auth/register.php">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-primary text-white py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Address API Provider</h1>
+                    <p class="lead mb-4">Access comprehensive Indonesian address data through our reliable and easy-to-use API service.</p>
+                    <div class="d-flex gap-3">
+                        <a href="auth/register.php" class="btn btn-light btn-lg">Get Started</a>
+                        <a href="#documentation" class="btn btn-outline-light btn-lg">Documentation</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="p-4 bg-white rounded-3 shadow-lg">
+                        <pre class="mb-0"><code class="language-json">{
+  "province": "DKI Jakarta",
+  "city": "Jakarta Selatan",
+  "district": "Kebayoran Baru",
+  "subdistrict": "Senayan",
+  "postal_code": "12190"
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Our API?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Fast & Reliable</h3>
+                            <p class="text-muted mb-0">High-performance API with 99.9% uptime guarantee and fast response times.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-success text-white rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Secure & Scalable</h3>
+                            <p class="text-muted mb-0">Enterprise-grade security with API key authentication and flexible rate limits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-info text-white rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="h5 mb-3">Complete Data</h3>
+                            <p class="text-muted mb-0">Comprehensive Indonesian address data, regularly updated and validated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Easy to Implement</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white py-3">
+                            <h5 class="card-title mb-0"><i class="fab fa-php me-2"></i>PHP Example</h5>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <pre class="text-white mb-0"><code>$apiKey = 'YOUR_API_KEY';
+$url = 'https://api.example.com/v1/provinces';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Authorization: Bearer $apiKey"
+]);
+
+$response = curl_exec($ch);
+$data = json_decode($response, true);</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white py-3">
+                            <h5 class="card-title mb-0"><i class="fab fa-js me-2"></i>JavaScript Example</h5>
+                        </div>
+                        <div class="card-body bg-dark">
+                            <pre class="text-white mb-0"><code>const apiKey = 'YOUR_API_KEY';
+const url = 'https://api.example.com/v1/provinces';
+
+fetch(url, {
+    headers: {
+        'Authorization': `Bearer ${apiKey}`
+    }
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta bg-gradient-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">Create an account now and get your API key in minutes.</p>
+            <a href="auth/register.php" class="btn btn-light btn-lg">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Address API</h5>
+                    <p class="text-muted">Providing comprehensive Indonesian address data through a modern REST API.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#features" class="text-muted">Features</a></li>
+                        <li><a href="#documentation" class="text-muted">Documentation</a></li>
+                        <li><a href="auth/register.php" class="text-muted">Register</a></li>
+                        <li><a href="auth/login.php" class="text-muted">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center text-muted">
+                <small>&copy; 2024 Address API Provider. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Styles -->
+    <style>
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    }
+
+    .feature-icon {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .hero {
+        position: relative;
+        overflow: hidden;
+        padding-top: 3rem;
+    }
+
+    pre {
+        background: #2d3748;
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    code {
+        color: #e2e8f0;
+    }
+
+    .navbar {
+        transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+    }
+
+    section {
+        scroll-margin-top: 80px;
+    }
+
+    .documentation pre {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    footer a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #fff !important;
+    }
+    </style>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+    // Add scrolled class to navbar on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            document.querySelector('.navbar').classList.add('scrolled');
+        } else {
+            document.querySelector('.navbar').classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+</body>
+</html> 

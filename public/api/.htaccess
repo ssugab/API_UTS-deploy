@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /uts_api2/api/
+
+# Handle API requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ gateway.php [QSA,L] 
